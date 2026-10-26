@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wishes💌</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <div class="buddy" id="buddy">🐰</div>
+    <section id="welcome">
+      <p class="tag">✨ A LITTLE SURPRISE FOR YOU ✨</p>
+      <h1>Welcome to Wishes!</h1>
+      <p class="subtitle">
+        Someone has a little surprise waiting for you.
+        Are you ready to enter? 💖
+      </p>
+      <button onclick="start()">Let's Go! 💌</button>
+    </section>
+    
+<section id="personalize" hidden>
+  <p class="tag">MAKE IT PERSONAL 💌</p>
+  <h1>Create a Special Wish!</h1>
+
+  <input id="receiverName" placeholder="Receiver's name">
+  <input id="senderName" placeholder="Your name">
+
+  <textarea id="personalMessage"
+    placeholder="Write your heartfelt message..."></textarea>
+
+ <button onclick="saveMessage()">Create My Link 💌</button>
+</section>
+
+<section id="shareWish" hidden>
+  <p class="tag">YOUR SURPRISE IS READY 💌</p>
+  <h1>Share Your Wishes! 🌸</h1>
+  <p class="subtitle">
+    Copy this link and send your special surprise.
+  </p>
+
+  <input id="wishLink" readonly>
+
+  <button onclick="copyWishLink()">Copy Link 🔗</button>
+  <p id="copyStatus"></p>
+</section>
+
+
+    <section id="choose" hidden>
+      <p class="tag">FIRST THINGS FIRST 🌷</p>
+      <h1>Choose your buddy!</h1>
+      <p class="subtitle">Your little friend will join your adventure.</p>
+
+      <div class="choices">
+        <button onclick="chooseBuddy('🐰')">🐰</button>
+        <button onclick="chooseBuddy('🐱')">🐱</button>
+        <button onclick="chooseBuddy('🐻')">🐻</button>
+        <button onclick="chooseBuddy('🦊')">🦊</button>
+      </div>
+
+      <p id="selected">Pick your favourite! 💕</p>
+      <button onclick="continueAdventure()">Let's Play! 🎉</button>
+    </section>
+<section id="questions" hidden>
+  <p class="tag">LET THE FUN BEGIN 🎉</p>
+  <p id="progress">Question 1 of 4</p>
+  <h1 id="questionTitle">Ready?</h1>
+  <p class="subtitle" id="questionText"></p>
+  <div id="answers" class="answer-list"></div>
+  <p id="reaction">Your buddy is waiting! 💕</p>
+  <button id="nextBtn" onclick="nextQuestion()" hidden>
+    Next Question ➜
+  </button>
+</section>
+<section id="finalWish" hidden>
+  <p class="tag">A LITTLE SURPRISE FOR YOU 💖</p>
+  <div id="finalBuddy" class="final-buddy">🐰</div>
+  <h1>A Little Message for You 💌</h1>
+  <h2>You Are Special!🫂 </h2>
+  
+<p class="subtitle" id="personalGreeting"></p>
+<p class="subtitle" id="personalNote"></p>
+<p class="subtitle" id="senderGreeting"></p>
+
+  <h2>Sending you a big hug! 🫂</h2>
+  <button onclick="restartWishes()">Play Again ↻</button>
+</section>
+    <footer>Made with a little bit of magic 💗</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

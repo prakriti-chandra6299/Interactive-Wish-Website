@@ -1,0 +1,156 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #ffc8dd, #cdb4db, #bde0fe);
+}
+
+.app {
+  width: 100%;
+  max-width: 480px;
+  padding: 35px 22px;
+  border-radius: 28px;
+  background: #ffffffdf;
+  box-shadow: 0 12px 35px #704c8c30;
+}
+
+.buddy {
+  font-size: 75px;
+  animation: bounce 1s infinite alternate;
+}
+
+h1 {
+  color: #8a3ffc;
+  font-size: 32px;
+}
+
+.subtitle {
+  color: #695477;
+  line-height: 1.7;
+  margin: 20px 0;
+}
+
+.tag {
+  color: #e05297;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+button {
+  padding: 13px 22px;
+  margin: 8px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #ff70a6, #a78bfa);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.08);
+}
+
+.choices button {
+  font-size: 32px;
+  padding: 12px;
+  background: #f5e8ff;
+}
+
+#selected {
+  color: #8a3ffc;
+}
+
+footer {
+  margin-top: 30px;
+  color: #9b6caa;
+  font-size: 12px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-12px);
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 26px;
+  }
+
+  .app {
+    padding: 25px 12px;
+  }
+}
+
+.answer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.answer-list button {
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(90deg, #ffd6e7, #e4d5ff);
+  color: #713f8f;
+  border: 2px solid transparent;
+}
+
+.answer-list button:hover {
+  border-color: #d68bff;
+}
+
+.answer-list button:disabled {
+  opacity: 0.75;
+  cursor: default;
+}
+
+#progress {
+  color: #e05297;
+  font-weight: bold;
+}
+
+#reaction {
+  color: #8a3ffc;
+  min-height: 24px;
+}
+
+.final-buddy {
+  font-size: 85px;
+  animation: bounce 1s infinite alternate;
+}
+input, textarea {
+  width: 90%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 2px solid #e0b3ff;
+  border-radius: 12px;
+  font: inherit;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
